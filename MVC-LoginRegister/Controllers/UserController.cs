@@ -11,7 +11,7 @@ namespace MVC_LoginRegister.Controllers
 {
     public class UserController : Controller
     {
-        //user controller
+       //user controller
       //Registration Action
       [HttpGet]
       public ActionResult Registration()
@@ -27,8 +27,8 @@ namespace MVC_LoginRegister.Controllers
             //initialize variables from registration page
             Boolean Status = false;
             string message = "";
-            try
-            {
+            //try
+            //{
                 //Model Validation
                 if (ModelState.IsValid)
                 {
@@ -58,7 +58,7 @@ namespace MVC_LoginRegister.Controllers
                     {
 
                         dc.Users.Add(user);
-                        dc.SaveChanges(); //bug when saving data. 
+                        //dc.SaveChanges(); //bug when saving data. 
 
                         //send email
                         SendVerificationLinkEmail(user.EmailID, user.ActivationCode.ToString());
@@ -74,11 +74,11 @@ namespace MVC_LoginRegister.Controllers
                 {
                     message = "Invalid request";
                 }
-            }
-            catch (Exception e)
-            {
-                Debug.WriteLine("eror" + e);
-            }
+            //}
+            //catch (Exception e)
+            //{
+            //    Debug.WriteLine("eror: " + e);
+            //}
 
             //Email Exists
 

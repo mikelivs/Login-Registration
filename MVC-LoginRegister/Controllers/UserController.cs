@@ -11,6 +11,7 @@ namespace MVC_LoginRegister.Controllers
 {
     public class UserController : Controller
     {
+        //user controller
       //Registration Action
       [HttpGet]
       public ActionResult Registration()

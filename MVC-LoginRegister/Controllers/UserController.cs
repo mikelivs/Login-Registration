@@ -58,7 +58,7 @@ namespace MVC_LoginRegister.Controllers
                     {
 
                         dc.Users.Add(user);
-                        //dc.SaveChanges(); //bug when saving data. 
+                        dc.SaveChanges(); //bug when saving data. 
 
                         //send email
                         SendVerificationLinkEmail(user.EmailID, user.ActivationCode.ToString());
@@ -182,7 +182,7 @@ namespace MVC_LoginRegister.Controllers
                 IsBodyHtml = true
 
             })
-                smtp.Send(message);
+               smtp.Send(message);
 
         }
 

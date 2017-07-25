@@ -14,7 +14,6 @@ namespace MVC_LoginRegister.Models
     
     public partial class User
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailID { get; set; }
@@ -22,5 +21,6 @@ namespace MVC_LoginRegister.Models
         public string Password { get; set; }
         public bool IsEmailVerified { get; set; }
         public System.Guid ActivationCode { get; set; }
+        public int UserID { get; set; }
     }
 }

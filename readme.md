@@ -3,7 +3,7 @@ ASP.NET Application with SQL Server Backend
 
 User Login Page
 
-Takes in:
+User input:
 -User First/Last Name 
 -email
 -password (encrypted/saved in SQL DB)
